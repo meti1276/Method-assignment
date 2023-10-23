@@ -1,0 +1,33 @@
+using System;
+
+// Define a custom class named "MathOperation"
+class MathOperation
+{
+    // Create a void method named "PerformMathOperation" that takes two integers as parameters
+    public void PerformMathOperation(int firstNumber, int secondNumber)
+    {
+        // Perform a simple math operation on the first integer
+        int result = firstNumber * 2;
+
+        // Display the second integer to the screen
+        Console.WriteLine($"The result of the math operation is: {result}");
+        Console.WriteLine($"The second integer is: {secondNumber}");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        // Instantiate the MathOperation class
+        MathOperation mathOp = new MathOperation();
+
+        // Call the method in the class, passing in two numbers
+        mathOp.PerformMathOperation(5, 10);
+
+        // Call the method in the class, specifying the parameters by name
+        int num1 = 7;
+        int num2 = 15;
+        mathOp.PerformMathOperation(firstNumber: num1, secondNumber: num2);
+    }
+}
